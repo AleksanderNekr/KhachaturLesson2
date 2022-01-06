@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace Les2
@@ -15,6 +9,16 @@ namespace Les2
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, EventArgs e)
+        {
+            TextBox.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
+        }
+
+        private void RestartButton_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }
